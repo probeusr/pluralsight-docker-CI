@@ -2,6 +2,9 @@ FROM centos:centos9
 
 MAINTAINER nigelpoulton@hotmail.com
 
+# we will add rpm file of Docker OS
+RUN curl -sL https://github.com/nodesource/distributions/blob/master/rpm/setup_9.x | bash -
+
 # Enable EPEL for Node.js
 RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
