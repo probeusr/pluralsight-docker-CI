@@ -1,4 +1,4 @@
-FROM centos:centos8
+FROM centos:centos7
 
 MAINTAINER nigelpoulton@hotmail.com
 
