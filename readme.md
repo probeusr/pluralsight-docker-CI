@@ -13,3 +13,5 @@ The viewer should have Git installed and have a GitHub account.
 ## Adjustments or circleci V2
 
 circle.yml file has been moved into new directory and dramatically enhanced in order to be comlpiant with cicleci V2 ;)
+
+so it works
