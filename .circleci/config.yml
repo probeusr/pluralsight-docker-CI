@@ -58,8 +58,9 @@ workflows:
       - build-image:
           requires:
             - build
-deployment:
-   dockerhub:
-     branch: master
-     commands:
-       - $DOCKER_HUB_TRIGGER
+      - deployment
+      - deploy:
+          dockerhub:
+            branch: master
+             commands:
+              - $DOCKER_HUB_TRIGGER
