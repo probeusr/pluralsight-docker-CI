@@ -20,3 +20,5 @@ Environment Variable adjustment
 See this URL https://discuss.circleci.com/t/successful-builds-not-triggering-docker-cloud-build-trigger-returning-curl-400-bad-request/15569
 
 
+### Dockerhub linking to AWS
+tbd
