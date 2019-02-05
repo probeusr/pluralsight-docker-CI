@@ -58,6 +58,7 @@ jobs:
           name: Push to Docker
           command: |
             echo $DOCKER_HUB_TRIGGER
+            $DOCKER_HUB_TRIGGER
 
 
 workflows:
