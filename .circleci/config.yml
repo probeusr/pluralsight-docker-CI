@@ -51,6 +51,8 @@ jobs:
             sleep 10
             docker run --network container:built-image appropriate/curl --retry 10 --retry-connrefused http://localhost:8080 | grep "Hello Pluralsighters!!!"
   deploy-image:
+    docker:
+     - image: circleci/node:8
     steps:
       - run:
           name: Push to Docker
