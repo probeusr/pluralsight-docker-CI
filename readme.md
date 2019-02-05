@@ -8,18 +8,15 @@ All of the files included in the .zip file (available to Plus subscribers) shoul
 
 Initializing a Git repo and making a remote of it on GitHub are explained in Module 2 of the course.
 
-The viewer should have Git installed and have a GitHub account.
-
-<<<<<<< HEAD
-Here we run Test by https connection to Git
-=======
-## Adjustments or circleci V2
-
+## Adjustments on CircleCi
+### New Directory Structure
 circle.yml file has been moved into new directory and dramatically enhanced in order to be comlpiant with cicleci V2 ;)
 
-so it works
->>>>>>> 3b144eb9fe381d1a92a35287be1dff35eff41e4a
+### CircleCi Workflow
+With V2 CircleCi introduced workflow this enhancement pickes up a lot of Jenkins functionality and also Docker Image functionalites
 
-Flow Test Local 2 Git 2 Circle (2) Docker
+### CircleCi Dockerhub linking
+Environment Variable adjustment
+See this URL https://discuss.circleci.com/t/successful-builds-not-triggering-docker-cloud-build-trigger-returning-curl-400-bad-request/15569
 
-Flow Test Local 2 Git 2 Circle 2 Docker
+
