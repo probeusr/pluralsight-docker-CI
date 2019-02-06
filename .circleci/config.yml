@@ -45,7 +45,7 @@ jobs:
           command: |
             sleep 10
             docker run --network container:built-image appropriate/curl --retry 10 --retry-connrefused http://localhost:8080 | grep "Hello Pluralsighters!!!"
-      - deploy-image
+      - deploy_image
       - run:
           name: Push to Docker
           command: |
