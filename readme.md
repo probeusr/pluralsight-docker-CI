@@ -19,6 +19,10 @@ With V2 CircleCi introduced workflow this enhancement pickes up a lot of Jenkins
 Environment Variable adjustment
 See this URL https://discuss.circleci.com/t/successful-builds-not-triggering-docker-cloud-build-trigger-returning-curl-400-bad-request/15569
 
+### CirlceCi Check
+open app insiude ssh session 
+listen to port
+run test towards application
 
 ### Dockerhub linking to AWS
-tbd
+tbd 
