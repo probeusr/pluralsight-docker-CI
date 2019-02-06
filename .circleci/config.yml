@@ -1,10 +1,8 @@
 version: 2
 jobs:
-  checkbyssh:
+  build:
     docker:
       - image: circleci/node:8
-    environment:
-      - DOCKER_IMAGE_NAME: myapp      
     steps:
       - checkout
       - restore_cache:
@@ -31,6 +29,13 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
+  build-image:
+    docker:
+      - image: circleci/node:8
+    environment:
+      - DOCKER_IMAGE_NAME: myapp
+    steps:
+      - checkout
       - setup_remote_docker
       - run:
           name: Build image
@@ -45,15 +50,23 @@ jobs:
           command: |
             sleep 10
             docker run --network container:built-image appropriate/curl --retry 10 --retry-connrefused http://localhost:8080 | grep "Hello Pluralsighters!!!"
+  deploy-image:
+    docker:
+     - image: circleci/node:8
+    steps:
       - run:
           name: Push to Docker
           command: |
-            echo $DOCKER_HUB_TRIGGER
             $DOCKER_HUB_TRIGGER
-
 
 workflows:
   version: 2
   build-workflow:
     jobs:
-      - checkbyssh   
+      - build
+      - build-image:
+          requires:
+            - build
+      - deploy-image:
+          requires:
+            - build-image        
