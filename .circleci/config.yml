@@ -31,7 +31,6 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
-      - setup_remote_docker
       - run:
           name: Build image
           command: |
